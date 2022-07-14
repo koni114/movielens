@@ -4,7 +4,7 @@ import os
 from airflow.models import BaseOperator
 from airflow.utils.decorators import apply_defaults
 
-from dags.custom.hooks import MovielensHook
+from custom.hooks import MovielensHook
 
 
 class MovielensFetchRatingsOperator(BaseOperator):

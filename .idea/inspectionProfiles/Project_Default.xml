@@ -6,6 +6,7 @@
         <list>
           <option value="_importlib_modulespec._Loader.exec_module" />
           <option value="airflow.models.dag.DAG.test_cycle" />
+          <option value="dags.custom.operators.custom" />
         </list>
       </option>
     </inspection_tool>

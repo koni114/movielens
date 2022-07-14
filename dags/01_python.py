@@ -9,14 +9,14 @@ import requests
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 
-from dags.custom.ranking import rank_movie_by_rating
+from custom.ranking import rank_movie_by_rating
 
 MOVIELENS_HOST = os.environ.get("MOVIELENS_HOST", "movielens")
 MOVIELENS_SCHEMA = os.environ.get("MOVIELENS_SCHEMA", "http")
 MOVIELENS_PORT = os.environ.get("MOVIELENS_PORT", "5000")
 
-MOVIELENS_USER = os.environ["MOVIELENS_USERS"]
-MOVIELENS_PASSWORD = os.environ["MOVIELENS_PASSWORD"]
+MOVIELENS_USER = os.environ.get("MOVIELENS_USERS", "airflow")
+MOVIELENS_PASSWORD = os.environ.get("MOVIELENS_PASSWORD", "airflow")
 
 
 def _get_ratings(start_date, end_date, batch_size=100):
@@ -63,7 +63,7 @@ def _get_with_pagination(session, url, params, batch_size=100):
 with DAG(
     dag_id="01_python",
     description="Fetches ratings from the Movielens API using the Python Operator.",
-    start_date=dt.datetime(2019, 1, 1),
+    start_date=dt.datetime(2022, 1, 1),
     end_date=dt.datetime(2019, 1, 10),
     schedule_interval="@daily",
 ) as dag:

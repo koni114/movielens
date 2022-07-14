@@ -3,7 +3,7 @@
 from airflow.sensors.base import BaseSensorOperator
 from airflow.utils.decorators import apply_defaults
 
-from dags.custom.hooks import MovielensHook
+from custom.hooks import MovielensHook
 
 
 class MovielensRatingsSensor(BaseSensorOperator):
