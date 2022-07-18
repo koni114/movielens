@@ -82,7 +82,7 @@ psutil==5.9.1
 py==1.11.0
 pycparser==2.21
 Pygments==2.12.0
-PyJWT==1.7.1
+PyJWT==2.4.0
 pyparsing==3.0.9
 pyrsistent==0.18.1
 pytest==7.1.2
@@ -94,6 +94,7 @@ python-slugify==4.0.1
 python3-openid==3.2.0
 pytz==2022.1
 pytzdata==2020.1
+pyupbit==0.2.33
 PyYAML==6.0
 requests==2.23.0
 rfc3986==1.5.0
@@ -115,6 +116,7 @@ typing-extensions==3.10.0.2
 tzlocal==1.5.1
 unicodecsv==0.14.1
 urllib3==1.25.11
+websockets==10.3
 Werkzeug==1.0.1
 wrapt==1.14.1
 WTForms==2.3.3

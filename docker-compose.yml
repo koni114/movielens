@@ -74,6 +74,18 @@ services:
     environment:
       API_USER: airflow
       API_PASSWORD: airflow
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    restart: always   # docker 엔진 실행시 자동으로 이미지 실행
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongodb:/mongodb/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root  # database initialization
+      - MONGO_INITDB_ROOT_PASSWORD=1234
+      - MONGO_INITDB_DATABASE=mydb
 
 volumes:
   data:
